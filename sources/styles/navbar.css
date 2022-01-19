@@ -1,0 +1,196 @@
+/* css document - navbar */
+
+/* navbar */
+#navbar{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: var(--navbar-bg);
+    color: var(--navbar-txt);
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+
+/* nav-toggle */
+#nav-toggle{
+    display: none;
+}
+
+/* nav-block */
+.nav-block{
+    width: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: width 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+/* nav-toggle-btn */
+.nav-toggle-btn{
+    position: relative;
+    padding: 0 0;
+    margin: 0 0;
+    z-index: 9;
+    display: none;
+}
+
+/* nav-btn */
+.nav-btn{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    border-radius: 100px;
+    border: 10px solid black;
+}
+
+.nav-btn-line{
+    width: 20px;
+    height: 2px;
+    background-color: var(--navbar-bg);
+    margin: 2px 0px;
+    transition: width 0.5s;
+}
+
+.line-01{
+    width: 18px;
+}
+
+.line-02{
+    width: 10px;
+}
+
+.line-03{
+    width: 0px;
+}
+
+.nav-btn:hover .line-01{
+    width: 8px;
+}
+
+.nav-btn:hover .line-02{
+    width: 12px;
+}
+
+.nav-btn:hover .line-03{
+    width: 18px;
+}
+
+#nav-toggle:checked ~ .nav-toggle-btn .line-01,
+#nav-toggle:checked ~ .nav-toggle-btn .line-02,
+#nav-toggle:checked ~ .nav-toggle-btn .line-03{
+    width: 20px;
+}
+
+/* nav-navbar */
+.nav-navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    transition: width 0.5s;
+}
+
+/* nav-brand */
+.nav-brand{
+    font-size: 2em;
+    font-weight: 900;
+    font-style: oblique;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: inherit;
+    display: inline-block;
+}
+
+/* nav-logo */
+.nav-logo{
+    width: 40px;
+    display: block;
+    object-fit: cover;
+}
+
+/* nav-list */
+.nav-list{
+    padding: 0 0;
+    margin: 0 0;
+}
+
+/* nav-item */
+.nav-item{
+    display: inline;
+}
+
+/* nav-link */
+.nav-link{
+    font-size: 0.95em;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+/* nav-link-btn */
+.nav-link-btn{
+    background-color: black;
+    color: white;
+    border-radius: 100px;
+    padding: 8px 20px;
+}
+
+@media only screen and (max-width: 700px){
+
+    /* nav-toggle - effect checked - nav-navbar */
+    #nav-toggle:checked ~ .nav-navbar{
+        width: 280px;
+    }
+
+    /* nav-toggle - effect checked - nav-block */
+    #nav-toggle:checked ~ .nav-block{
+        width: 100%;
+    }
+
+    .nav-btn{
+        position: fixed;
+        top: 91vh;
+        right: 3vh;
+    }
+
+    /* nav-block */
+    .nav-block{
+        display: block;
+    }
+
+    /* nav-toggle-btn */
+    .nav-toggle-btn{
+        display: block;
+    }
+
+    /* nav-navbar */
+    .nav-navbar{
+        width: 0px;
+        height: 100vh;
+        background-color: var(--navbar-bg);
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    /* nav-item */
+    .nav-item{
+        display: block;
+        margin: 20px 0px;
+    }
+
+}
+

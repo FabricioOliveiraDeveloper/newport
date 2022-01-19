@@ -1,0 +1,17 @@
+/* css document - colors */
+
+:root{
+
+    /* paleta de cores */
+    --black: #000000;
+    --white: #FFFFFF;
+
+    --blue-1: #0c0d29;
+    --blue-2: #0e1136;
+    --blue-3: #151957;
+    --blue-4: #393c8f;
+    --blue-5: #858adb;
+
+    --navbar-bg: var(--white);
+
+}
